@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-*{
-    box-sizing: border-box;
-}
 
 /* define custom properties */
 :root {
     --line-border-fill: #3498db;
-    --line-border-empty: #e0e0e0;
+    --line-border-empty: #383838;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: var(--line-border-empty);
+    background-color: #f1f1f1;
     font-family: 'Muli', sans-serif;
     display: flex;
     align-items: center;
@@ -65,13 +67,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid var(--line-border-empty);;
+    border: 3px solid var(--line-border-empty);
     transition: 0.4s ease;
 }
 
 .circle.active {
     border-color: var(--line-border-fill);
 }
+
 .btn {
     background-color: var(--line-border-fill);
     color: #fff;
@@ -91,6 +94,7 @@ body {
 .btn:focus {
     outline: 0;
 }
+
 .btn:disabled {
     background-color: var(--line-border-empty);
     cursor: not-allowed;
