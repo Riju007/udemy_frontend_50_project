@@ -2,5 +2,15 @@ const open = document.getElementById("open");
 const close = document.getElementById("close");
 const container = document.querySelector(".container");
 
-open.addEventListener("click", () => container.classList.add("show-nav"))
-close.addEventListener("click", () => container.classList.remove("show-nav"))
+function toggleNav(action) {
+    container.classList[action]("show-nav");
+}
+
+if (open && close && container) {
+    
+
+    open.addEventListener("click", () => toggleNav("add"));
+    close.addEventListener("click", () => toggleNav("remove"));
+} else {
+    console.error("Required elements not found in the DOM.");
+}
